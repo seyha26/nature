@@ -1,0 +1,266 @@
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:ital,opsz,wght@0,9..40,100..1000;1,9..40,100..1000&family=Forum&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "DM Sans", serif;
+}
+
+:root {
+    --primary: #536942;
+    --secondary: #ffd936;
+    --white: #efefef;
+}
+
+body {
+    color: var(--primary);
+    overflow-x: hidden;
+}
+
+#main {
+    background-image: url(../img/main.png);
+    min-height: 70vh;
+    background-position: bottom center;
+    background-size: cover;
+}
+
+a {
+    text-decoration: none;
+}
+
+.btn {
+    padding: 12px 20px;
+    background: transparent;
+    outline: none;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-secondary {
+    border: 1px solid var(--white);
+    color: var(--white);
+    font-weight: bold;
+
+}
+
+.btn-primary {
+    border: none;
+    background: var(--secondary);
+    color: var(--primary);
+}
+
+.container {
+    max-width:1200px;
+    margin: auto;
+    padding: 16px;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.nav-list {
+    display: flex;
+    list-style: none;
+    gap: 28px;
+    align-items: center;
+    
+    transition: .4s right;
+}
+
+.nav-list a {
+    color: var(--white);
+}
+
+.main-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin-top: 80px;
+    color: var(--white);
+}
+
+.main-content .intro-heading {
+    font-size: 50px;
+
+}
+
+.main-content .main-heading {
+    font-size: 110px;
+    margin-top: -20px;
+}
+
+.main-content p {
+    max-width: 250px;
+    margin-bottom: 10px;
+}
+
+.menu-btn {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    display: none;
+}
+
+.section-title h1 {
+    font-size: 50px;
+    text-align: center;
+}
+
+.section-title .line {
+    width: 150px;
+    height: 4px;
+    background: var(--secondary);
+    margin: auto;
+}
+
+section {
+    margin: 80px auto;
+}
+
+.services {
+    display: flex;
+    margin-top: 40px;
+    gap: 16px;
+    justify-content: center;
+}
+
+.service {
+    width: 350px;
+}
+
+.service img {
+    max-width: 100%;
+    border-radius: 5px;
+    transition: .3s transform ease;
+}
+
+.service img:hover {
+    transform: scale(1.1);
+}
+
+#testimonail {
+    background: #f1f2fa;
+}
+
+#testimonail .container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    max-width: 500px;
+    gap: 30px;
+    padding: 50px;
+}
+
+#testimonail h1 {
+    font-family: "Forum", serif;
+    font-size: 30px;
+    text-align: center;
+}
+
+#testimonail .profile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#about .container{
+    display: flex;
+    align-items: center;
+    gap: 120px;
+    justify-content: space-between;
+}
+
+#about .container .about-content {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    align-items: start;
+}
+#about .container .about-content h1 {
+    font-family: 'Forum', sans-serif;
+    font-size: 30px;
+}
+
+#questions {
+    min-height: 500px;
+    background-image: url(../img/main-2.png);
+    background-position: bottom center;
+    background-size: cover;
+}
+
+#questions .container {
+    max-width: 500px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 500px;
+    gap: 16px;
+    text-align: center;
+}
+
+#questions .container h1 {
+    font-size: 50px;
+}
+
+footer {
+    margin-top: -60px;
+}
+
+footer .container{
+    display: flex;
+    padding: 20px 16px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.footer-links {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+@media screen and (max-width: 520px) {
+    .menu-btn {
+        display: block;
+    }
+    .nav-list {
+        flex-direction: column;
+        background: gray;
+        top: 0;
+        right: -999px;
+        position: absolute;
+        width: 80%;
+        height: 100vh;
+        padding-top: 80px;
+    }
+    .active {
+        right: 0;
+    }
+    .nav-list li:not(:last-child) {
+        border-bottom: 1px solid var(--white);
+         text-align: left;
+        width: 100%;
+        padding: 10px 30px;
+    }
+    .services {
+        flex-wrap: wrap;
+    }
+    #about .container {
+        flex-direction: column;
+        gap: 30px;
+    }
+
+    footer .container {
+        flex-direction: column;
+        gap: 20px;
+    }
+}
